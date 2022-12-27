@@ -67,7 +67,7 @@ def main():
     print("Hello World!")
 
     #This will create a black image of 512x512 pixels (all set to 0)
-    my_img = np.zeros((512,512,3))
+    my_img = np.zeros((512,512,3),np.uint8)
 
 
     draw_line(my_img)

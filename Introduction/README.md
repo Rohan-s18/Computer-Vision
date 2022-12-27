@@ -9,4 +9,5 @@ This directory contaoins the following code:
   - **save_video.py:** This python module contains source code to save a video from the webcam and saving it to a file with a specific filepath.  
   - **play_video.py:** This python module contains source code to play a input video file on an opncv window.  
   - **draw_image.py:** This python module contains source code for drawing an image and shapes using opencv.  
-  - **mouse_gesture_drawing.py:**  This python module contains source code to draw different shapes onto opencv windows using mouse gestures.   
+  - **mouse_gesture_drawing.py:**  This python module contains source code to draw different shapes onto opencv windows using mouse gestures.  
+  - **color_palette.py:** This python moduel contains source code for creating a trackbar color palette.   
