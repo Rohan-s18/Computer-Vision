@@ -29,9 +29,12 @@ def capture_video():
 
         #Display the web cam footage
         cv.imshow("Your Video",frame)
+
+        #Quitting when 'q' is pressed
         if cv.waitKey(1) == ord('q'):
             break
-    # When everything done, release the capture
+
+    #Releasing the capture
     cap.release()
     cv.destroyAllWindows()
 
