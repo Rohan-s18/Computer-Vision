@@ -60,12 +60,14 @@ def modify_channel(img, attr, val):
     return img
 
 #  This function will modify the borders of an image
-def modify_borders(img):
-    replicate = cv.copyMakeBorder(img,10,10,10,10,cv.BORDER_REPLICATE)
-    reflect = cv.copyMakeBorder(img,10,10,10,10,cv.BORDER_REFLECT)
-    reflect101 = cv.copyMakeBorder(img,10,10,10,10,cv.BORDER_REFLECT_101)
-    wrap = cv.copyMakeBorder(img,10,10,10,10,cv.BORDER_WRAP)
-    constant= cv.copyMakeBorder(img,10,10,10,10,cv.BORDER_CONSTANT,value=BLUE)
+def modify_borders(img, wid):
+    GREEN = [0,255,0]
+
+    replicate = cv.copyMakeBorder(img,wid,wid,wid,wid,cv.BORDER_REPLICATE)
+    reflect = cv.copyMakeBorder(img,wid,wid,wid,wid,cv.BORDER_REFLECT)
+    reflect101 = cv.copyMakeBorder(img,wid,wid,wid,wid,cv.BORDER_REFLECT_101)
+    wrap = cv.copyMakeBorder(img,wid,wid,wid,wid,cv.BORDER_WRAP)
+    constant= cv.copyMakeBorder(img,wid,wid,wid,wid,cv.BORDER_CONSTANT,value=GREEN)
     plt.subplot(231),plt.imshow(img,'gray'),plt.title('ORIGINAL')
     plt.subplot(232),plt.imshow(replicate,'gray'),plt.title('REPLICATE')
     plt.subplot(233),plt.imshow(reflect,'gray'),plt.title('REFLECT')
@@ -74,4 +76,44 @@ def modify_borders(img):
     plt.subplot(236),plt.imshow(constant,'gray'),plt.title('CONSTANT')
     plt.show()
 
+#  This is the main function of the module to demonstrate the working of these operations
+def main():
+
+    #Write the filepath of your image here
+    filepath = ""
+    img = cv.imread(filepath)
+
+    print("\n")
+
+    #Getting the pixel info
+    get_pixel(img,100,100)
+
+
     
+    #Modifying the B attribute
+    modify_attribute(img,100,100,'b',255)
+
+    print("\n")
+
+    #Getting the image properties
+    print_image_properties(img)
+
+    print("\n")
+
+    #Getting the region of image
+    my_roi = roi(img,20,80,20,80)
+    cv.imshow("Region",my_roi)
+
+    #Modifying the 'G' channel to 10
+    img = modify_channel(img,'g',10)
+    cv.imshow("Lmao",img)
+
+    #Changing the borders of the image
+    modify_borders(img,100)
+
+
+    print("Hello World!")
+
+
+if __name__ == "__main__":
+    main()
