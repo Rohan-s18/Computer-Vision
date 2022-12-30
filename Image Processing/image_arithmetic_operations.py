@@ -61,3 +61,34 @@ def bitwise_operations(img1, img2):
     cv.waitKey(0)
     cv.destroyAllWindows()  
 
+
+#  Main function
+def main():
+
+    #Change these filepaths to wherever the images are stored
+    fp_1 = ""
+    fp_2 = ""
+
+    #Reading the images
+    img_1 = cv.imread(fp_1)
+    img_2 = cv.imread(fp_2)
+
+    #Adding the 2 images
+    add_images(img_1, img_2)
+
+    #Blending the 2 images
+    blend_images(img_1, img_2, 0.3,0.7,0.0)
+
+    #Using the bitwise operations on the two images
+    bitwise_operations(img_1, img_2)
+
+
+    print("Hello World!")
+
+    
+
+
+
+
+if __name__ == "__main__":
+    main()
