@@ -3,8 +3,8 @@
 This is a Computer Vision repository using OpenCV, currently the source code uses the Python library for OpenCV, in the future I may add source code for the C++ library of OpenCV. The source code is divided into different repositories for different use cases of Computer Vision. This repository contains an **Introduction** directory that contains basic source code for you to learn how to use the OpenCV library in Python.  
 
 The directories in this repository are:  
-  - **Introduction:** This is an introductory project for using the opencv library in python. This directory contains basic gui code using opencv, such as accessing cameras, displaying/capturing images and videos, and other drawing tools of opencv.  
-  - **Image Processing:** This repository contains python source code for basic image editing and processing using OpenCV.  
+  - **Introduction:** This is an introductory project for using the opencv library in python. This directory contains basic gui code using opencv, such as accessing cameras, displaying/capturing images and videos, and other drawing tools of opencv (completed).  
+  - **Image Processing:** This repository contains python source code for basic image editing and processing using OpenCV (completed).  
   - **Raspberry pi project:** This is an opencv project specifically designed for a raspberry-pi based computer vision project.  
 
 ## Setup
