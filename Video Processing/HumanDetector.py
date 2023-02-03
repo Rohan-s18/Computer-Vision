@@ -1,3 +1,10 @@
+"""
+Author: Rohan Singh
+February 2, 2023
+Code for Human Detection using OpenCV hog
+"""
+
+# Imports
 import cv2
 
 # Load the pre-trained HOG (Histogram of Oriented Gradients) human detection model
